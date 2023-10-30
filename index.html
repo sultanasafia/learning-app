@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application with firebase</title>
+    
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    
+    <link rel="shortcut icon" href="./assets/icons.png" type="image/x-icon">
+</head>
+<body>
+    
+    <nav>
+        <span>If you have already account Go to </span>
+        <a href="#loginForm">Login </a>
+
+    </nav>
+    <div id="regForm">
+        
+        <h1>SignUp</h1>
+        <input type="name" placeholder="Name" id="name">
+        <input type="email" placeholder="Email" id="email">
+        <br>
+        <input type="password" placeholder="Password" id="password">
+        <br>
+         <button id="registerBtn">SignUp</button>
+    </div>
+    <div id="loginForm">
+        <h1>Login</h1>
+        <input type="email" placeholder="Email" id="loginEmail">
+        <br>
+        <input type="password" placeholder="Password" id="loginPassword">
+        <br>
+        <button id="loginBtn">Login</button>
+    </div>
+
+    <!-- --------------signup login login complete -->
+    
+    <section>
+      
+       
+          <h1>Course Enrollment System</h1>
+          
+          <div id="course-enrollment">
+            <h2>Course Enrollment</h2>
+            <select id="course-list">
+              <option value="math">Mathematics</option>
+              <option value="history">History</option>
+              <option value="science">Science</option>
+              <option value="english">English</option>
+              <option value="urdu">Urdu</option>
+            </select>
+            <button onclick="enroll()">Enroll</button>
+          </div>
+          
+          <div id="enrolled-courses">
+            <h2>Enrolled Courses</h2>
+            <ul id="enrolled-list"></ul>
+          </div>
+          
+          <div id="live-classes">
+            <h1>Select Any One</h1>
+            <h2>Live Classes</h2>
+            <ul>
+              <li><a href="javascript:void(0);" onclick="startLiveClass('Math')">Mathematics Class</a></li>
+              <li><a href="javascript:void(0);" onclick="startLiveClass('History')">History Class</a></li>
+              <li><a href="javascript:void(0);" onclick="startLiveClass('Science')">Science Class</a></li>
+              <li><a href="javascript:void(0);" onclick="startLiveClass('English')">English Class</a></li>
+              <li><a href="javascript:void(0);" onclick="startLiveClass('Urdu')">Urdu Class</a></li>
+            </ul>
+          </div>
+        
+          <div id="live-class-container">
+            <h2 id="live-class-title"></h2>
+            <div id="live-class-chat">
+              <h3>Live Chat</h3>
+              <div id="chat-messages"></div>
+              <input type="text" id="chat-input" placeholder="Type your message">
+              <button onclick="sendMessage()">Send</button>
+            </div>
+          </div>
+        <!-- ============== -->
+        <div id="progress-tracking">
+            <h2>Your Course Progress</h2>
+            <h1>Course Progress Tracking</h1>
+    <div id="courses">
+        <div class="course">
+            <h2>Course 1:Mathematics Fundamentals</h2>
+            <progress id="course1-progress" max="100" value="0"></progress>
+            <button id="course1-complete">Complete Course</button>
+            <div id="course1-certificate" class="certificate"></div>
+        </div>
+        <div class="course">
+            <h2>Course 2: English Fundamentals</h2>
+            <progress id="course2-progress" max="100" value="0"></progress>
+            <button id="course2-complete">Complete Course</button>
+            <div id="course2-certificate" class="certificate"></div>
+        </div>
+        <div class="course">
+            <h2>Course 3: Urdu Fundamentals</h2>
+            <progress id="course3-progress" max="100" value="0"></progress>
+            <button id="course3-complete">Complete Course</button>
+            <div id="course3-certificate" class="certificate"></div>
+        </div>
+        <div class="course">
+            <h2>Course 4: History Fundamentals</h2>
+            <progress id="course4-progress" max="100" value="0"></progress>
+            <button id="course4-complete">Complete Course</button>
+            <div id="course4-certificate" class="certificate"></div>
+        </div>
+        <div class="course">
+            <h2>Course 5: Science Fundamentals</h2>
+            <progress id="course5-progress" max="100" value="0"></progress>
+            <button id="course5-complete">Complete Course</button>
+            <div id="course5-certificate" class="certificate"></div>
+        </div>
+        <!-- Add more courses as needed -->
+    </div>
+            <div id="progress">
+                <!-- HTML for the discussion form -->
+               <header>
+                   <h1>Course Discussion Form</h1>
+
+               </header>
+                
+                <main>
+                    <section id="discussion">
+                        <h2>Discussion Section</h2>
+                        <div id="messages">
+                            <!-- Discussion messages will be displayed here -->
+                        </div>
+                        <input type="text" id="message" placeholder="Type your message">
+                        <button id="send">Send</button>
+                    </section>
+                </main>
+
+            </div>
+        </div>
+    
+        <!-- ========================== -->
+      
+         
+    </section>
+    <section class="criteria">
+        <h2>Adherence to Specified Features and Requirements:</h2>
+        <ul>
+            <li>Are all the specified features and requirements implemented as outlined in the project scope?</li>
+            <li>Does the project meet the functional and non-functional requirements (e.g., responsiveness, performance)?</li>
+        </ul>
+    </section>
+
+
+
+
+
+
+    <script type="module" src="./assets/js/app.js"></script>
+<script src="./assets/js/script.js"></script>
+</body>
+</html>
